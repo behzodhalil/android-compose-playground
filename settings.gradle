@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "android-compose-playground"
+include ':app'
+include ':01-basic'
+include ':02-thinking-in-compose'
+include ':03-material-design-compose'
+include ':04-complex-ui-compose'
+include ':05-animation-in-compose'
+include ':06-jetnotes-sample'
+include ':07-reddit-sample'
