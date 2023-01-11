@@ -10,19 +10,21 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import uz.behzoddev.a01_basic.ui.theme.AndroidcomposeplaygroundTheme
+import uz.behzoddev.a01_basic.ui.screen.MyDialogScreen
+import uz.behzoddev.a01_basic.ui.screen.MyTextFieldScreen
+import uz.behzoddev.a01_basic.ui.theme.AndroidComposePlaygroundTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AndroidcomposeplaygroundTheme {
+            AndroidComposePlaygroundTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                   MyDialogScreen()
                 }
             }
         }
@@ -37,7 +39,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    AndroidcomposeplaygroundTheme {
+    AndroidComposePlaygroundTheme {
         Greeting("Android")
     }
 }
