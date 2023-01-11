@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">01-basic</string>
+    <string name="my_composable_function">My Composable Function</string>
+    <string name="my_text">My Text</string>
+    <string name="email">Email</string>
+    <string name="number">Number</string>
+    <string name="click_me">Click Me</string>
+    <string name="text_button">Download</string>
+    <string name="alert_dialog_title">Title</string>
+    <string name="alert_dialog_text">Some text contains in context.</string>
+    <string name="alert_dialog_confirm">Confirm</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+
+    <string name="row_one">Row one</string>
+    <string name="row_two">Row two</string>
+    <string name="row_three">Row three</string>
+
+    <string name="column_one">Column one</string>
+    <string name="column_two">Column two</string>
+    <string name="column_three">Column three</string>
 </resources>
