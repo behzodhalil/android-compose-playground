@@ -11,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import uz.behzoddev.a01_basic.ui.screen.MyDialogScreen
+import uz.behzoddev.a01_basic.ui.screen.MyListScreen
+import uz.behzoddev.a01_basic.ui.screen.MyScrollingScreen
 import uz.behzoddev.a01_basic.ui.screen.MyTextFieldScreen
 import uz.behzoddev.a01_basic.ui.theme.AndroidComposePlaygroundTheme
 
@@ -24,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                   MyDialogScreen()
+                    MyListScreen()
                 }
             }
         }
