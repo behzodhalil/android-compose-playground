@@ -18,4 +18,6 @@
     <string name="column_one">Column one</string>
     <string name="column_two">Column two</string>
     <string name="column_three">Column three</string>
+
+    <string name="top_bar_menu">Menu</string>
 </resources>
