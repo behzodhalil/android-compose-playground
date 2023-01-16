@@ -7,6 +7,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import uz.behzoddev.a02_thinking_in_compose.`01-basic`.GreetingElevatedButtonExpanded
+import uz.behzoddev.a02_thinking_in_compose.`02-state_in_compose`.WaterCounter
+import uz.behzoddev.a02_thinking_in_compose.`02-state_in_compose`.WellCheckNessItem
+import uz.behzoddev.a02_thinking_in_compose.`02-state_in_compose`.WellnessItemTask
 import uz.behzoddev.a02_thinking_in_compose.ui.theme.AndroidcomposeplaygroundTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AndroidcomposeplaygroundTheme {
-               GreetingElevatedButtonExpanded()
+               WellCheckNessItem()
             }
         }
     }
