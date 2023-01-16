@@ -1,4 +1,4 @@
-package uz.behzoddev.a06_jetnotes_sample.ui.theme
+package uz.behzoddev.a06_jetnotes_sample.`core-ui`.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

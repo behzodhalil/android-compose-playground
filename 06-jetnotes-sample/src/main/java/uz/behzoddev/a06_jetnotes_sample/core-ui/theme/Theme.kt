@@ -1,4 +1,4 @@
-package uz.behzoddev.a06_jetnotes_sample.ui.theme
+package uz.behzoddev.a06_jetnotes_sample.`core-ui`.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -28,7 +28,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun AndroidcomposeplaygroundTheme(
+fun AndroidComposePlaygroundTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
