@@ -1,4 +1,4 @@
-package uz.behzoddev.a06_jetnotes_sample.`core-ui`.theme
+package uz.behzoddev.a06_jetnotes_sample.core_ui.theme
 
 import androidx.compose.ui.graphics.Color
 
