@@ -4,10 +4,11 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
-import uz.behzoddev.a06_jetnotes_sample.`core-ui`.theme.AndroidComposePlaygroundTheme
+import uz.behzoddev.a06_jetnotes_sample.core_ui.theme.AndroidComposePlaygroundTheme
+import uz.behzoddev.a06_jetnotes_sample.data.local.entity.NoteEntityModel
+import uz.behzoddev.a06_jetnotes_sample.presentation.component.NotesUiComponent
 
 @Composable
 fun JetNoteUi() {
@@ -27,7 +28,34 @@ fun JetNoteUi() {
                     }
                 )
             },
-            content = { NoteUi() }
+            content = {
+                NotesUiComponent(notes = listOf(
+                    NoteEntityModel(
+                        title = "Title #1",
+                        content = "Content",
+                        isCheckedOff = false,
+                        isInTrash = false,
+                        canBeCheckedOff = false,
+                        colorId = 1
+                    ),
+                    NoteEntityModel(
+                        title = "Title #2",
+                        content = "Content",
+                        isCheckedOff = true,
+                        isInTrash = false,
+                        canBeCheckedOff = false,
+                        colorId = 1
+                    ),
+                    NoteEntityModel(
+                        title = "Title #3",
+                        content = "Content",
+                        isCheckedOff = false,
+                        isInTrash = false,
+                        canBeCheckedOff = false,
+                        colorId = 1
+                    )),
+                    onNoteCheckedChange = {}, onNoteClick = {})
+            }
         )
     }
 }
