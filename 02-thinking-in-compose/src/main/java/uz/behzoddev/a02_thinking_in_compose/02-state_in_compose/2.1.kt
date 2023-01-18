@@ -23,7 +23,7 @@ fun WaterScreen(modifier: Modifier = Modifier) {
 fun WaterCounter(modifier: Modifier = Modifier) {
 
     Surface(modifier = modifier.padding(8.dp)) {
-        Row() {
+        Row {
             val count: MutableState<Int> = remember {
                 mutableStateOf(0)
             }
