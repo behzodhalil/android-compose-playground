@@ -4,8 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Checkbox
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -87,17 +86,71 @@ fun NoteUiComponent(
     }
 }
 
+@OptIn(ExperimentalMaterialApi::class)
+@Composable
+fun NoteWithCardUiComponent(
+    modifier: Modifier = Modifier,
+    note: NoteEntityModel,
+    onNoteClick: (NoteEntityModel) -> Unit,
+    onNoteCheckedRange: (NoteEntityModel) -> Unit,
+    isSelected: Boolean
+) {
+    val background = if (isSelected)
+        Color.LightGray
+    else
+        MaterialTheme.colors.surface
+
+    val backgroundShape = RoundedCornerShape(4.dp)
+
+    Card(
+        modifier = modifier
+            .padding(8.dp)
+            .fillMaxWidth(),
+        shape = backgroundShape,
+        backgroundColor = background
+    ) {
+        ListItem(
+            modifier = modifier.clickable { onNoteClick.invoke(note) },
+            text = { Text(text = note.title, maxLines = 1) },
+            secondaryText = {
+                Text(text = note.content, maxLines = 1)
+            },
+            icon = {
+                NoteColorUi(
+                    size = 40.dp,
+                    color = Color.Magenta,
+                    border = 1.dp
+                )
+            },
+            trailing = {
+                Checkbox(
+                    modifier = modifier.padding(start = 8.dp),
+                    checked = note.isCheckedOff,
+                    onCheckedChange = {})
+            }
+        )
+
+    }
+}
+
 @Composable
 @Preview(showBackground = true)
 fun NoteUiComponentPreview() {
-    NoteUiComponent(
-        note = NoteEntityModel(
-            title = "Note 1",
-            content = "Content",
-            canBeCheckedOff = false,
-            colorId = 1,
-            isCheckedOff = false,
-            isInTrash = false
-        )
+    /* NoteUiComponent(
+         note = NoteEntityModel(
+             title = "Note 1",
+             content = "Content",
+             canBeCheckedOff = false,
+             colorId = 1,
+             isCheckedOff = false,
+             isInTrash = false
+         )
+     )*/
+
+    NoteWithCardUiComponent(
+        note = NoteEntityModel.DEFAULT_NOTE,
+        onNoteClick = {},
+        onNoteCheckedRange = {},
+        isSelected = false
     )
 }
