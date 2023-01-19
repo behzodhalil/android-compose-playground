@@ -7,13 +7,13 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class NoteEntityModel(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    @ColumnInfo(name = "title") val title: String,
-    @ColumnInfo(name = "content") val content: String,
-    @ColumnInfo(name = "can_be_checked_off") val canBeCheckedOff: Boolean,
-    @ColumnInfo(name = "is_checked_off") val isCheckedOff: Boolean,
-    @ColumnInfo(name = "color_id") val colorId: Long,
-    @ColumnInfo(name = "in_trash") val isInTrash: Boolean
+    @PrimaryKey(autoGenerate = true) var id: Long = 0L,
+    @ColumnInfo(name = "title") var title: String = "",
+    @ColumnInfo(name = "content") var content: String = "",
+    @ColumnInfo(name = "can_be_checked_off") var canBeCheckedOff: Boolean = false,
+    @ColumnInfo(name = "is_checked_off") var isCheckedOff: Boolean = false,
+    @ColumnInfo(name = "color_id") var colorId: Long = 0L,
+    @ColumnInfo(name = "in_trash") var isInTrash: Boolean = false
 ) {
 
     companion object {
@@ -32,5 +32,7 @@ data class NoteEntityModel(
             NoteEntityModel(11, "Title 11", "Content 11", true, false, 11, false),
             NoteEntityModel(12, "Title 12", "Content 12", true, false, 12, false)
         )
+
+        val DEFAULT_NOTE = NoteEntityModel(1, "RW Meeting", "Prepare sample project", false, false, 1, false)
     }
 }
